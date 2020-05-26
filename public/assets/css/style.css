@@ -22,7 +22,7 @@
 	list-style: none;
 }
 
-.devoured li {
+.devoured li p {
 	background-color: #137788;
 	border: 1px solid #d6d5d4;
 	border-radius: 10px;
@@ -30,6 +30,7 @@
 	text-align: center;
 	text-transform: capitalize;
 	color: white;
+	padding: 1px;
 }
 
 .devoured li {
