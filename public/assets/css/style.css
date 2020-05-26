@@ -1,0 +1,66 @@
+
+.pic {
+	height: 250px;
+	margin-bottom: 20px;
+}
+
+.input {
+	height: 30px;
+	width: 280px;
+	font-size: 14px;
+	padding-top: 2%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.burger-div {
+	display: block;
+	width: 350px;
+	margin: 0 auto;
+}
+
+.devour, .devoured {
+	list-style: none;
+}
+
+.devoured li {
+	background-color: #eae7de;
+	border: 1px solid #d6d5d4;
+	padding: 2px;
+	font-size: 14px;
+	text-align: center;
+	text-transform: capitalize;
+}
+
+.devoured li {
+	width: 290px;
+}
+
+.press {
+	float: right;
+	margin-left: 150px;
+	cursor: pointer;
+}
+
+.press:hover {
+	background-color: #c91e1e;
+	color: #fff;
+	border-radius: 5px;
+	margin-top: -2px;
+}
+
+
+#add-burger {
+	height: 40px;
+	width: 120px;
+	background-color: #c91e1e;
+	font-size: 14px;
+	color: #fff;
+	cursor: pointer;
+	border-radius: 5px;
+}
+
+#add:hover {
+	background-color: #ad0f0f;
+}
+

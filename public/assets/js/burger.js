@@ -1,17 +1,17 @@
-$(document).ready(() => {
-    $('.press').on('click', () => {
-        const id = $(this).data('burgerid');
+$(document).ready(function() { 
+	$(".press").on("click", function() {
+		var id = $(this).data("burgerid");
 
-        const updatedBurger = {
-            devoured: true
-        };
+		var updatedBurger = {
+			devoured: true
+		};
 
-        $.ajax('/api/burgers/' + id, {
-            type: 'PUT',
-            data: updatedBurger
-        }).then(() => {
-            console.log('updated id ', id);
-            location.reload();
-        });
-    });
+		$.ajax("/api/burgers/" + id, {
+			type: "PUT",
+			data: updatedBurger
+		}).then(function() {
+			console.log("updated id ", id);
+			location.reload();
+			});
+	});
 });
