@@ -1,76 +1,79 @@
 const connection = require("../config/connection.js");
 
 function printQuestionMarks(num) {
-    let arr = [];
+  let arr = [];
 
-    for (let i = 0; i < num; i++) {
-        arr.push("?");
-    }
-    return arr.toString();
+  for (var i = 0; i < num; i++) {
+    arr.push("?");
+  }
+
+  return arr.toString();
 }
 
 function objToSql(ob) {
-    let arr = [];
-    for (let key in ob) {
-        let value = ob[key];
-        if (Object.hasOwnProperty.call(ob, key)) {
-            if (typeof value === "string" && value.indexOf(" ") >= 0) {
-                value = "'" + value + "'";
-            }
-            arr.push(key + "=" + value);
-        }
+  let arr = [];
+  for (let key in ob) {
+    let value = ob[key];
+    // check to skip hidden properties
+    if (Object.hasOwnProperty.call(ob, key)) {
+      if (typeof value === "string" && value.indexOf(" ") >= 0) {
+        value = "'" + value + "'";
+      }
+      arr.push(key + "=" + value);
     }
-    return arr.toString();
+  }
+
+  return arr.toString();
 }
 
 const orm = {
-    selectAll: function (table, cb) {
-        const queryString = "SELECT * FROM ??";
-        console.log(queryString);
-        connection.query(queryString, [table], (err, result) => {
-            if (err) {
-                throw err;
-            }
-            cb(result);
-        });
-    },
-    insertOne: function (table, cols, vals, cb) {
-        const queryString = "INSERT INTO " + table;
+  selectAll: function (table, cb) {
+    let queryString = "SELECT * FROM ??";
+    console.log(queryString);
+    connection.query(queryString, [table], function (err, result) {
+      if (err) {
+        throw err;
+      }
+      cb(result);
+    });
+  },
+  insertOne: function (table, cols, vals, cb) {
+    let queryString = "INSERT INTO " + table;
 
-        queryString += " (";
-        queryString += cols.toString();
-        queryString += ") ";
-        queryString += "VALUES (";
-        queryString += printQuestionMarks(vals.length);
-        queryString += ") ";
+    queryString += " (";
+    queryString += cols.toString();
+    queryString += ") ";
+    queryString += "VALUES (";
+    queryString += printQuestionMarks(vals.length);
+    queryString += ") ";
 
-        console.log(queryString);
+    console.log(queryString);
 
-        connection.query(queryString, vals, (err, result) => {
-            if (err) {
-                throw err;
-            }
+    connection.query(queryString, vals, (err, result) => {
+      if (err) {
+        throw err;
+      }
 
-            cb(result);
-        });
-    },
-    updateOne: function (table, objColVals, condition, cb) {
-        const queryString = "UPDATE " + table;
+      cb(result);
+    });
+  },
+  updateOne: function (table, objColVals, condition, cb) {
+    let queryString = "UPDATE " + table;
 
-        queryString += " SET ";
-        queryString += objToSql(objColVals);
-        queryString += " WHERE ";
-        queryString += condition;
+    queryString += " SET ";
+    queryString += objToSql(objColVals);
+    queryString += " WHERE ";
+    queryString += condition;
 
-        console.log(queryString);
-        connection.query(queryString, (err, result) => {
-            if (err) {
-                throw err;
-            }
+    console.log(queryString);
+    connection.query(queryString, (err, result) => {
+      if (err) {
+        throw err;
+      }
 
-            cb(result);
-        });
-    }
+      cb(result);
+    });
+  }
 }
 
 module.exports = orm;
