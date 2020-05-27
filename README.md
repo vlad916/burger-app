@@ -1,15 +1,15 @@
 # Burger Restaurant App
 
-### Description
+## Description
 
 This is an application which allows the user to enter a burger of their choice that they like to eat.
 Whenever a user submits a burger's name, the burger will then be displayed on the left side of the page, waiting to be devoured. Once a burger has been devoured by clicking the `devour button`, the burger will then be displayed on the right side of the  page. 
 
-### Heroku Link 
+## Heroku Link 
 
 
 
-### Technologies used in building the application
+## Technologies used in building the application
 
 * NodeJS
 * MySQL
