@@ -91,3 +91,7 @@ h3 {
   color: orangered;
   text-shadow: 1.5px 1.5px 1.5px black;
 }
+
+.devLeft {
+  margin-right: 220px;
+}
