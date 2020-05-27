@@ -21,7 +21,7 @@ Whenever a user submits a burger's name, the burger will then be displayed on th
 
 ___
 
-<img src="/assets/image.1png">
+<img src="/assets/image/1.png">
 
 ___
 
