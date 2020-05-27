@@ -1,10 +1,11 @@
 <div class="container text-center">
-	<div class="jumbotron">
-		{{!-- <img class="pic" src="/assets/image/1.jpg"> --}}
+	<div>
+		<img class="pic" src="/assets/image/1.jpg">
 	</div>
 
 	<div class="row">
 		<div class="col-sm-6 text-center">
+			<h3>Burgers Available...</h3>
 			<ul class="devour">
 				{{#each burgers}}
 				{{#unless devoured}}
@@ -24,7 +25,9 @@
 		</div>
 
 		<div class="burger-div">
+			<h3>Burgers Eaten...</h3>
 			<div class="col-sm-6 text-center">
+
 				<ul class="devoured">
 					{{#each burgers}}
 					{{#if devoured}}
