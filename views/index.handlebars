@@ -1,6 +1,6 @@
 <div class="container text-center">
-	<div>
-		<img class="pic" src="/assets/image/1.jpg">
+	<div class="jumbotron">
+		{{!-- <img class="pic" src="/assets/image/1.jpg"> --}}
 	</div>
 
 	<div class="row">
@@ -9,7 +9,14 @@
 				{{#each burgers}}
 				{{#unless devoured}}
 				<li>
-					<p>{{id}}. {{burger_name}} <button class="press" id='pressButton' data-burgerid="{{id}}"> Devour it!</button></p>
+					<div class="row">
+						<div class="col-sm-6">
+							<p class="devourList">{{id}}. {{burger_name}}
+						</div>
+						<div class="col-sm-6">
+							<button class="press" id='pressButton' data-burgerid="{{id}}">Devour!!!</button></p>
+						</div>
+					</div>
 				</li>
 				{{/unless}}
 				{{/each}}

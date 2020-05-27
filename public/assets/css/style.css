@@ -1,3 +1,6 @@
+.jumbotron {
+
+}
 
 .pic {
 	height: 250px;
@@ -20,6 +23,17 @@
 
 .devour, .devoured {
 	list-style: none;
+}
+
+.devourList {
+	background-color: #137788;
+	border: 1px solid #d6d5d4;
+	border-radius: 10px;
+	font-size: 14px;
+	text-align: center;
+	text-transform: capitalize;
+	color: white;
+	padding: 1px;
 }
 
 .devoured li p {
