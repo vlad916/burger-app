@@ -7,7 +7,7 @@ Whenever a user submits a burger's name, the burger will then be displayed on th
 
 ## Heroku Link 
 
-* https://whispering-crag-59451.herokuapp.com/
+* https://tranquil-mesa-88160.herokuapp.com/
 
 ## Technologies used in building the application
 
