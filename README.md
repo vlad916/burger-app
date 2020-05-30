@@ -7,7 +7,7 @@ Whenever a user submits a burger's name, the burger will then be displayed on th
 
 ## Heroku Link 
 
-* https://tranquil-mesa-88160.herokuapp.com/
+* https://intense-coast-62871.herokuapp.com/
 
 ## Technologies used in building the application
 
